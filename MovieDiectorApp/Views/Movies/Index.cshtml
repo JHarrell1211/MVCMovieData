@@ -1,0 +1,52 @@
+﻿
+
+<body class="movieindex">
+    @model IEnumerable<MovieDiectorApp.Models.Movie>
+
+    @{
+        ViewBag.Title = "Index";
+    }
+    <h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+
+
+
+</body>
+
+<div id="books">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>
+                            @Html.DisplayFor(modelItem => item.Title) <br/>
+                            @Html.DisplayFor(modelItem => item.ReleaseDate)  @Html.DisplayFor(modelItem => item.Rating)
+                        </h3>
+
+                        <p>
+                            Director : @Html.DisplayFor(modelItem => item.Director.Name)
+                        </p>
+                        <p>
+                            Genre : @Html.DisplayFor(model => item.Genre.Type)
+                        </p>
+                        <p>
+                            @Html.DisplayNameFor(model => model.RTScore) : @Html.DisplayFor(model => item.RTScore)
+                        </p>
+                        <p>
+                            @Html.DisplayNameFor(model => model.WonAward) : @Html.DisplayFor(model => item.WonAward)
+                        </p>
+
+                        <button>@Html.ActionLink("Edit", "Edit", new { id = item.MovieID })</button>
+                        <button> @Html.ActionLink("Details", "Details", new { id = item.MovieID }) </button>
+                        <button>@Html.ActionLink("Delete", "Delete", new { id = item.MovieID })</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

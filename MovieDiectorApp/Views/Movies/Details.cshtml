@@ -1,0 +1,88 @@
+﻿<body class="moviedetails">
+@model MovieDiectorApp.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 id="movie">Details</h2>
+
+<div>
+    <h3>Movie</h3>
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <h4>
+                @Html.DisplayNameFor(model => model.Director.Name)
+            </h4>
+
+            <p>
+                @Html.DisplayFor(model => model.Director.Name)
+            </p>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <h4>
+                @Html.DisplayNameFor(model => model.Genre.Type)
+            </h4>
+
+            <p>
+                @Html.DisplayFor(model => model.Genre.Type)
+            </p>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <h4>
+                @Html.DisplayNameFor(model => model.Title)
+            </h4>
+
+            <p>
+                @Html.DisplayFor(model => model.Title)
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <h4>
+                @Html.DisplayNameFor(model => model.ReleaseDate)
+            </h4>
+
+            <p>
+                @Html.DisplayFor(model => model.ReleaseDate)
+            </p>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <h4>
+                @Html.DisplayNameFor(model => model.RTScore)
+            </h4>
+
+            <p>
+                @Html.DisplayFor(model => model.RTScore)
+            </p>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <h4>
+                @Html.DisplayNameFor(model => model.Rating)
+            </h4>
+
+            <p>
+                @Html.DisplayFor(model => model.Rating)
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <h4>
+                @Html.DisplayNameFor(model => model.WonAward)
+            </h4>
+
+            <p>
+                @Html.DisplayFor(model => model.WonAward)
+                <img 
+            </p>
+
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MovieID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+    </body>

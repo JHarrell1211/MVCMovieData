@@ -1,0 +1,93 @@
+﻿body {
+    padding-top: 50px;
+    /*padding-bottom: 20px;*/
+    
+}
+
+.home-page {
+    background-image: url('images/film-reel.jpg');
+    background-size: cover;
+    width: 100%;
+    opacity: .8;
+    margin:0;
+}
+
+.space-1{
+    height: 200px;
+}
+
+.navbar{
+    font-family:Georgia;
+}
+
+.rowtitle {
+    text-align: center;
+    color: darkred;
+    font-size: 18px;
+}
+
+.movieindex {
+    background-image: url('Images/Popcorn.jpg');
+    background-size: cover;
+}
+
+.movietable, .directortable, genretable {
+    background-color: white;
+    opacity: .8;
+}
+
+.directorindex {
+    background-image: url('Images/film-director.jpg');
+    background-size: cover;
+}
+ h3, h2, h4 {
+     font-family: 'Lucida Console';
+ }
+
+.moviedetails {
+    background-image: url('Images/8a1326322e9b977e1ceb85e38034d2d1.jpg');
+    background-size: cover;
+}
+#movie {
+    margin-top: 150px;
+}
+
+.thumbnail {
+    background-color: lightsteelblue;
+    border-radius: 50% / 10%;
+    color: white;
+    text-align: center;
+    text-indent: .1em;
+}
+
+.thumbnail:before {
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    right: -5%;
+    left: -5%;
+    background: inherit;
+    border-radius: 5% / 50%;
+}
+
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    /*padding-left: 15px;
+    padding-right: 15px;*/
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    /*max-width: 280px;*/
+}
